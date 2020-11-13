@@ -26,7 +26,7 @@ class Stack
       if @length == 2 
         @pointer = @head
       elsif @length == 1
-        @head = nil
+        # @head = nil
         @pointer= @head
       else
         @pointer = @linkedlist[-2]
@@ -41,19 +41,18 @@ class Stack
     end
   end
 
-test_stack = Stack.new
+    test_stack = Stack.new
 
-  test_stack.push("first")
-#   test_stack.push("second")
-#   test_stack.push("third")
+    test_stack.push("first")
+    test_stack.push("in")
+    test_stack.push("last")
+    test_stack.push("out")
 
-  p test_stack
-  p test_stack.length
+    p test_stack
+    p test_stack.length
 
     test_stack.pop
-  p test_stack  
-   p test_stack.peek
+    p test_stack  
+    p test_stack.peek
 
-   test_stack.push("first")
-   p test_stack
 
