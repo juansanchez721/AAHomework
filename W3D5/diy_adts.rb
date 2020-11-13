@@ -23,25 +23,37 @@ class Stack
 
     def pop
       # removes one element from the stack
+      if @length == 2 
+        @pointer = @head
+      elsif @length == 1
+        @head = nil
+        @pointer= @head
+      else
         @pointer = @linkedlist[-2]
+      end
         @linkedlist.pop
         @length -= 1
     end
 
     def peek
       # returns, but doesn't remove, the top element in the stack
-      @ivar.peek
+      @pointer
     end
   end
 
 test_stack = Stack.new
 
   test_stack.push("first")
-  test_stack.push("second")
-  test_stack.push("third")
+#   test_stack.push("second")
+#   test_stack.push("third")
 
   p test_stack
   p test_stack.length
 
     test_stack.pop
   p test_stack  
+   p test_stack.peek
+
+   test_stack.push("first")
+   p test_stack
+
