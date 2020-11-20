@@ -48,9 +48,14 @@ class Array
             longest_word
         end
 
+        
+        def dancing_octopus
+            self.max_by(&:length)
+        end
+
 end
 
 test_arr = ['fish', 'fiiish', 'fiiiiish', 'fiiiish', 'fffish', 'ffiiiiisshh', 'fsh', 'fiiiissshhhhhh']
 
-p test_arr.sluggish_octopus
+p test_arr.dancing_octopus
 
