@@ -1,11 +1,12 @@
 class UserMailer < ApplicationMailer
-    default from: 'everybody@appacademy.io'
-    attr_accessor :user
-    def welcome_email(user)
 
-        @user = user
-        @url = 'https://localhost:3000/session/new'
-        mail(to: @user.username, subject: 'Welcome to 99 Cats'  )
-
-    end
+        default from: 'everybody@appacademy.io'
+    
+        def welcome_email(user)
+    
+            @user = user
+            mail(to: @user.username, subject: "Welcome to 99 Cats"  )
+    
+        end
+    
 end
